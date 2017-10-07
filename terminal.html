@@ -27,7 +27,19 @@
             .red {
                 color: #ff0096;
             }
+            input {
+                font-family: courier, monospace !important;
+                border: 1px solid gray;
+                background-color: #000;
+                color: #fff;
+            }
         </style>
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <script src="js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+        <script src="js/main.js"></script>
     </head>
 
     <body>
@@ -35,24 +47,42 @@
             <p class="green">JLF &amp; Edwina</p>
 
             <p>
-                The wedding is being held on August 8th, 2018 in Bali. The specific location is <a href="something">here.</a>
+                The wedding is being held on Monday, October 16th 2018 in Bali.
             </p>
             <p>
-                We need you to <a href="something">RSVP</a>.
+                The specific location is <a href="https://goo.gl/maps/FLijRzABnou" target="_blank">Pandawa Cliff Estate</a>.
             </p>
-
             <br/>
             <p class="green">Some Notes</p>
 
-            <p>Something or other to be spelled out later.</p>
+            <p><a href="https://www.lonelyplanet.com/indonesia/bali">Some</a> have called Bali 'the most beautiful place on Earth'.</p>
             <p class="red">NOTE: Engraved toasters will *not* be accepted as gifts.</p>
-
+            <p>Sort out your accommodations, you're not children.</p>
             <br/>
-            <p class="green">Some Pics</p>
 
-            <a href="test">[1]</a>
-            <a href="test">[2]</a>
-            <a href="test">[3]</a>
+            <p class="green">Some Pics</p>
+            <span class="parent-container">
+                <a href="img/couple-over-ages/kojo_2012.jpg">[1]</a>
+                <a href="img/couple-over-ages/kojo_california.jpg">[2]</a>
+                <a href="img/couple-over-ages/kojo_california_drunk.jpg">[3]</a>
+                <a href="img/couple-over-ages/kojo_canucks.jpg">[4]</a>
+                <a href="img/couple-over-ages/kojo_dinner.jpg">[5]</a>
+                <a href="img/couple-over-ages/kojo_nvm.jpg">[6]</a>
+                <a href="img/couple-over-ages/kojo_rockies_omg_my_hair.jpg">[7]</a>
+                <a href="img/couple-over-ages/kojo_snowmen.jpg">[8]</a>
+            </span>
+
+            <p class="green">RSVP</p>
+            <p>
+                <input
+                    class="form-field"
+                    type="text"
+                    id="guest-name"
+                    placeholder="Find your name"
+                    role="textbox">
+            </p>
+            <div id="guest-result"></div>
+
         </div>
     </body>
 </html>

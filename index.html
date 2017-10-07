@@ -1,45 +1,38 @@
 <!DOCTYPE html>
     <head>
+        <title>KoJo Wedding</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-        <title>KoJo Wedding</title>
         <meta name="description" content="Welcome to the wedding website for Jonathan and Edwina's wedding">
-
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-        <!-- For iPhone 4 with high-resolution Retina display: -->
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
-        <!-- For first-generation iPad: -->
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
-        <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-
-        <link rel="shortcut icon" href="favicon.ico?v=1">
+        <link rel="shortcut icon" href="favicon.ico">
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main-1.6.css">
-
+        <link rel="stylesheet" href="css/magnific-popup.css">
         <link href="https://fonts.googleapis.com/css?family=Merriweather|Parisienne" rel="stylesheet">
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+        <script src="js/main.js"></script>
     </head>
+
     <body>
         <div id="bg-image">
             <img src="img/bg-pic.jpg" alt="bg" />
         </div>
 
-        <div id="bg-container">
+            <div id="bg-container">
 
-            <div class="header-container">
-                <div id="heading" class="wrapper clearfix">
-                    <nav id="nav">
-                        <ul>
-                            <li><a href="#brideandgroom">THE BRIDE &amp; GROOM</a></li>
-                            <li><a href="#wedding">WEDDING</a></li>
-                            <li><a href="#accomodations">ACCOMODATIONS</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="heading">
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#brideandgroom">THE BRIDE &amp; GROOM</a></li>
+                        <li><a href="#wedding">WEDDING</a></li>
+                        <li><a href="#accomodations">ACCOMODATIONS</a></li>
+                        <li><a href="#rsvp">RSVP</a></li>
+                    </ul>
+                </nav>
             </div>
 
             <div class="main-container">
@@ -47,12 +40,14 @@
 
                     <header>
                         <div id="introtext">
-                            <span class="head-edwina">Edwina</span>
-                            <span class="head-jlf">&nbsp;
+                            <span class="head-names">Edwina</span>
+                            <span class="head-names">&nbsp;
                                 <span class="amp">&amp;</span> 
                                 Jonathan
                             </span>
-                            <div class="date">August 8<sup>th</sup>, 2018</div>
+                            <div class="date">October 16<sup>th</sup>, 2018</div>
+                            <div class="date">&nbsp;</div>
+                            <div class="date">#kojo2018</div>
                         </div>
                     </header>
 
@@ -61,47 +56,57 @@
                     <section id="brideandgroom" class="clearfix">
 
                         <h1>The Bride and Groom</h1>
-                                
-                        <div class="column left">
+                        <div class="column full">
 
-                            <h2>Edwina</h2>
+                            <h2>How We Met</h2>
+
                             <p>
-                                <img src="http://lorempixel.com/200/200/food" class="thumb" alt="Edwina" />
-                                Edwina is a human being, lorem ipsum lojelum misbotum golum.
-                                Edwina is a human being, lorem ipsum lojelum misbotum golum.
-                                Edwina is a human being, lorem ipsum lojelum misbotum golum.
-                                Edwina is a human being, lorem ipsum lojelum misbotum golum.
-                                Edwina is a human being, lorem ipsum lojelum misbotum golum.
-                                Edwina is a human being, lorem ipsum lojelum misbotum golum.
-                        </div><!--end column-->
-                        <div class="column right">
+                                Edwina grew up in Hong Kong, while Jonathan grew up in a small village in Canada.
+                                Our very different worlds collided in Vancouver, where we both studied at UBC.
+                                We stuck together through all kinds of life transitions, and really became adults
+                                together.
+                            </p>
 
-                            <h2>Jonathan</h2>
                             <p>
-                                <img src="http://lorempixel.com/200/200/food" class="thumb" alt="Jonathan" />
-                                My name is JLF, some also call me J.Lo. Hello hello hello... Great time to
-                                be alive, everything is great. Marriage etc. etc.
+                                Now, a decade later, we're <em>finally</em> tying the knot. 
+                                We're excited to share this moment with our closest friends and family. See you soon!
+                            </p>
 
-                                Goodbye everyone.
                         </div><!--end column-->
-
-                        <div class="clearfix"></div>
 
                         <div class="column full">
                             <div class="hr-t"></div>
                             <div class="hr-b"></div>
                         </div>
 
-                        <div class="column full">
+                        <h2>Over The Years</h2>
 
-                            <h2>How We Met</h2>
-                            <p>Blah blah blah blah adsfdskalsdjfkldsajfkldsjfkldsajf
-                            adsfkljdsafkljdsaklfj
-                            sadfkljsdafklj
-                            and htne the cat jumped over the moon.
-                            </p>
-
-                        </div><!--end column-->
+                        <div class="column full parent-container">
+                            <a href="img/couple-over-ages/kojo_2012.jpg">
+                                <img alt="kojo" class="img-grid" src="img/couple-over-ages/kojo_2012.jpg" />
+                            </a>
+                            <a href="img/couple-over-ages/kojo_california.jpg">
+                                <img alt="kojo" class="img-grid" src="img/couple-over-ages/kojo_california.jpg" />
+                            </a>
+                            <a href="img/couple-over-ages/kojo_california_drunk.jpg">
+                                <img alt="kojo" class="img-grid" src="img/couple-over-ages/kojo_california_drunk.jpg" />
+                            </a>
+                            <a href="img/couple-over-ages/kojo_canucks.jpg">
+                                <img alt="kojo" class="img-grid" src="img/couple-over-ages/kojo_canucks.jpg" />
+                            </a>
+                            <a href="img/couple-over-ages/kojo_dinner.jpg">
+                                <img alt="kojo" class="img-grid" src="img/couple-over-ages/kojo_dinner.jpg" />
+                            </a>
+                            <a href="img/couple-over-ages/kojo_nvm.jpg">
+                                <img alt="kojo" class="img-grid" src="img/couple-over-ages/kojo_nvm.jpg" />
+                            </a>
+                            <a href="img/couple-over-ages/kojo_rockies_omg_my_hair.jpg">
+                                <img alt="kojo" class="img-grid" src="img/couple-over-ages/kojo_rockies_omg_my_hair.jpg" />
+                            </a>
+                            <a href="img/couple-over-ages/kojo_snowmen.jpg">
+                                <img alt="kojo" class="img-grid" src="img/couple-over-ages/kojo_snowmen.jpg" />
+                            </a>
+                        </div>
 
                     </section>
 
@@ -110,71 +115,25 @@
                         <h1>Wedding</h1>
 
                         <div class="column left">
-                            <h2>CEREMONY</h2>
+                            <h2>Ceremony</h2>
                             <p>
-                                The Inn at Rancho Santa Fe <br />
-                                Rancho Santa Fe, California <br /><br />
-                                Friday, September 6, 2013 <br />
-                                6:00 PM at the Croquet Lawn <br /><br />
-                                *Adult reception to follow <br /><br /><br />
-
-                                <img src="img/theinn-large.png" class="theinn" alt="The Inn at Rancho Santa Fe" />
+                                Pandawa Cliff Estate <br>
+                                Bali, Indonesia <br>
+                                Monday, October 16th, 2018 <br>
+                                5:00 PM in the back lawn <br>
                             </p>
-                            
-
-
                         </div><!--end column--> 
+
                         <div class="column right">
-                            <h2>SCHEDULE OF EVENTS</h2>
+                            <h2>Schedule of Events</h2>
                             <p>
-                                Rehearsal Dinner <br />
-                                Thursday, September 5th at 8pm<br /><br />
-                                Golf <br />
-                                Friday, September 6th at 9am<br /><br />
-                                Ceremony <br />
-                                Friday, September 6th at 6pm (reception to follow)<br /><br />
-                                Breakfast &amp; Bocce <br />
-                                Saturday, September 7th at 10am<br />
+                                Tea Ceremony <br>
+                                Monday, October 16th at 11 AM <br> <br>
+                                Hung Over Brunch <br>
+                                Tuesday, October 17th at 11 AM <br> <br>
                             </p>
                         </div><!--end column--> 
 
-                        <div class="clearfix"></div>
-
-                        <div class="column full">
-                            <div class="hr-t"></div>
-                            <div class="hr-b"></div>
-                        </div>
-
-                        <h2>BRIDAL PARTY</h2>
-
-                        <div class="column left bp">
-                            
-                            <h2>Bridesmaids </h2>
-                            <div class="column left">
-                                <p>
-                                Coming Soon!<br />
-                                </p>
-                            </div>
-                            <div class="column right">
-                                <p>
-                                </p>
-                            </div>
-
-                        </div><!--end column--> 
-                        <div class="column right bp">
-
-                            <h2>Groomsmen</h2> 
-                            <div class="column left">
-                                <p>
-                                Coming Soon!<br />
-                                </p>
-                            </div>
-                            <div class="column right">
-                                <p>
-                                </p>
-                            </div>
-
-                        </div><!--end column-->           
                     </section>
 
                     <section id="accomodations" class="clearfix">
@@ -183,45 +142,12 @@
 
                         <div class="column left">
 
-                            <h2>HOTELS</h2>
+                            <h2>Hotels</h2>
                             <p>
-                                (At the venue) <br />
-                                The Inn at Rancho Santa Fe <br />
-                                5951 Linea Del Cielo <br />
-                                Rancho Santa Fe, CA 92067 <br />
-                                <a href="tel:1-858-756-1131">(858) 756-1131</a> <br />
-                                $279 <br /> 
-                                - <br />
-                                Morgan Run Resort &amp; Club (1.9 miles away) <br />
-                                5690 Cancha De Golf <br />
-                                Rancho Santa Fe, CA 92091 <br />
-                                <a href="tel:1-866-599-6674">(866) 599-6674</a> <br />
-                                $90 <br />
-                                - <br />
-                                (Closer to the beach) <br />
-                                Courtyard San Diego Solana Beach/Del Mar (4.5 miles away) <br />
-                                717 S Hwy 101 <br />
-                                Solana Beach, CA <br />
-                                <a href="tel:1-858-792-8200">(858) 792-8200</a> <br />
-                                $109 <br />
+                                TODO?
                             </p>
                         </div><!--end column-->
 
-                        <div class="column right">
-                            <h2>DIRECTIONS</h2>
-                            <p>
-                                Northbound from San Diego <br /><br />
-                               
-                                Take Interstate 5 North to the Villa de La Valle exit #36.  Turn right (east) onto Via de La Valle, and proceed for 4 miles. After crossing La Gracia, turn left on Via de Santa Fe following the signs to Rancho Santa Fe.  At the first stop sign, turn left onto Paseo Delicias and drive 2 blocks to a five way stop.  Take a slight right onto Linea del Cielo and proceed for one block.  The Inn is located on the left side of the road at 5951 Linea del Cielo.
-                                <br /><br />
-
-                                Southbound from LA, Riverside &amp; OC<br /><br />
-                               
-                                Take Interstate 5 South to the Lomas Santa Fe exit #37.  Turn left (east) onto Lomas Santa Fe, and proceed 4.5 miles.  The road name will change to Linea Del Cielo.  The Inn is located on the right side of the road at 5951 Linea del Cielo.
-                                <br />
-                            </p>
-                            
-                        </div><!--end column-->
 
                         <div class="clearfix"></div>
 
@@ -232,12 +158,10 @@
 
                         <div class="column full">
 
-                            <h2>VICINITY MAP</h2>
+                            <h2>Area Map</h2>
 
                             <div id="gmap">
-                                <iframe src="https://maps.google.com/maps/ms?msid=205751736116737027595.0004d416d6aa1647722db&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;ll=32.91418,-116.982422&amp;spn=0.806997,1.167297&amp;z=9&amp;output=embed"></iframe>
-                                <br />
-                                <small><a href="https://maps.google.com/maps/ms?msid=205751736116737027595.0004d416d6aa1647722db&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;ll=32.91418,-116.982422&amp;spn=0.806997,1.167297&amp;z=9&amp;output=embed" target="_blank">View larger map</a></small>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97353.05350092251!2d115.12009329453336!3d-8.779040143099348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd25b7b502fd2b7%3A0xa170e3e1605cf76b!2sPandawa+Cliff+Estate!5e0!3m2!1sen!2suk!4v1507396244278" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
                         </div>
 
@@ -249,31 +173,40 @@
                         </div>
 
                         <div class="column full">
-                            <h2>ABOUT RANCHO SANTA FE</h2>
-                            <p>
-                                Choose to relax and soak up the California sunshine at the resort's pool, or meander across the street to explore the boutiques, jewelry stores, restaurants and antique shops at The Village of Rancho Santa Fe (fondly referred to as "The Village" by the residents).  A friday morning tee time will be arranged for those who are interested, at Rancho Santa Fe Golf Club- a private, 18-hole championship golf course considered one of the Top 20 Best Golf Courses in California.
-                            </p>
+                            <h2>About Bali</h2>
+
+                            <blockquote>
+                                Bali is an island and province of Indonesia. The province includes the island of
+                                Bali and a few smaller neighbouring islands.
+                                <a href="https://en.wikipedia.org/wiki/Bali" target="_blank">(Wikipedia)</a>
+                            </blockquote>
+
+                            <blockquote>
+                                The mere mention of Bali evokes thoughts of a paradise.
+                                It's more than a place; it's a mood, an aspiration, a tropical state of mind.
+                                <a href="https://www.lonelyplanet.com/indonesia/bali" target="_blank">(Lonely Planet)</a>
+                            </blockquote>
+
                         </div><!--end column-->
-            
+
+                    </section>
+
+                    <section id="rsvp" class="clearfix">
                         <div class="column full">
-                            <h2>HISTORY OF THE INN</h2>
+                            <h2>RSVP</h2>
                             <p>
-                                Ninety years ago, construction began on La Morada (“dwelling” in Spanish), the first building in what would become Rancho Santa Fe. Now known as The Inn at Rancho Santa Fe, “The Inn” to locals, it was then a guesthouse for prospective land buyers, a place to “put them up” while they looked at lots owned by the Santa Fe Land Improvement Company. The company, a subsidiary of the Santa Fe Railway, had bought up parcels, planting eucalyptus trees for railroad spikes. But as history has so often shown, not everything goes according to plan. The wood, the company discovered, was too soft to hold the spikes. It was on to plan B.
+                                We need to know whether you can make it - the sooner the better! 😊
                             </p>
                             <p>
-                                That plan turned out to be fortuitous. It led to the master-planned community of Rancho Santa Fe, designed by Lilian Rice, a National City-born architect and U.C. Berkeley graduate, who would earn acclaim for her signature Spanish Colonial Revival style. Rice designed the village’s key commercial and residential buildings, many now considered so historically significant that they are listed on the National Register of Historic Places.
+                                <input
+                                    class="form-field"
+                                    type="text"
+                                    id="guest-name"
+                                    placeholder="Find your name"
+                                    role="textbox">
                             </p>
-                            <p>
-                                Throughout the decades The Inn has been a favorite destination for many years of famous and influential people.  In 1932, singer-actor Bing Crosby purchased one of Juan Osuna’s original adobes with 50 acres, and hired Lilian Rice as his architect. Legendary architect Frank Lloyd Wright was married in the parlor of the Inn in 1928.   
-                            </p>
-                            <p>
-                                Just as the architecture of the missions tells a story about the history of California, so does Lilian Rice’s legendary design of The Inn. It is a perfect representation of old California charm and Rice's belief that true beauty lies in simplicity rather than ornateness. The Inn is a perfect reflection of Rice's dream - a place where time stands still amidst the simplistic, natural beauty that is Rancho Santa Fe.  &nbsp;&nbsp;
-                                
-                                Go <a href="http://www.theinnatrsf.com/press_media/" target="_blank">here</a> and <a href="http://ranchandcoast.com/DETOUR/27/destinations/4506/THEN-NOW-INN-AT-RANCHO-SANTA-FE/IMAGE/10526/" target="_blank">here</a> for more information.
-
-                            </p>
-                        </div><!--end column-->
-
+                            <div id="guest-result"></div>
+                        </div>
                     </section>
 
                     <div style="height: 300px"></div>
@@ -282,18 +215,5 @@
             </div> <!-- #main-container -->
         </div> <!-- #bg-container -->
 
-        <script src="js/main-1.6.js"></script>
-
-        <script>
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-XXXXXXX-XX']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-        </script>
     </body>
 </html>

@@ -119,9 +119,9 @@ body {
     Theme
    =================== */
 
-.header-container {
-    position:absolute;
-    bottom:20px;
+.heading {
+    position: fixed;
+    top: 0px;
     width: 100%;
     background: black;
     z-index: 10;
@@ -129,10 +129,6 @@ body {
     background: rgb(0, 0, 0);
     /* RGBa with 0.9 opacity */
     background: rgba(0, 0, 0, 0.8);
-    /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#CC000000);
-    /* For IE 8*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000, endColorstr=#CC000000)";
 }
 
 .title {
@@ -142,32 +138,15 @@ body {
     display: block;
     padding: 10px 0 10px 0;
     margin-bottom: 300px;
-    /* background: black; */
-
-    /* -ms-border-radius: 8px; */
-    /* -o-border-radius: 8px; */
-    /* -moz-border-radius: 8px; */
-    /* -webkit-border-radius: 8px; */
-    /* border-radius: 8px; */
-
-    /* Fallback for web browsers that doesn't support RGBa */
-    /* background: rgb(0, 0, 0); */
-    /* RGBa with 0.7 opacity */
-    /* background: rgba(0, 0, 0, 0.4); */
 }
 
-#introtext .head-edwina {
-    font-family: 'Merriweather', serif;
-    font-size: 2em;
-    line-height: 100%;
-}
 #introtext .amp {
     position: relative;
     top: 19px;
     margin-left: -10px;
     font-size: 0.7em;
 }
-#introtext .head-jlf {
+#introtext .head-names {
     font-family: 'Merriweather', serif;
     font-size: 2em;
     line-height: 100%;
@@ -258,7 +237,9 @@ body {
     left: -50%; 
     width: 200%; 
     height: 200%;
+    filter: blur(10px);
 }
+
 #bg-image img {
     position: absolute; 
     top: 0; 
@@ -334,37 +315,24 @@ section h2 {
         background-position: 50% 20%;
     }
 
-    /** get the transparent bar on the bottom **/
-    .header-container {
-        position:absolute;
-        bottom:20px;
+    .heading {
+        position: fixed;
+        top: 0px;
         width:100%;
         line-height:12px;
-    }
-
-    .header-container.sticky {
-        position: fixed;
-        top: 15px;
-        
-        animation:thedrop 1s 1;
-        -moz-animation:thedrop 1s 1;
-        -webkit-animation:thedrop 1s 1;
     }
 
     #introtext {
         padding: 30px 0 30px 0;
     }
 
-    #introtext .head-edwina {
-        font-size: 3em;
-    }
     #introtext .amp {
         position: relative;
         top: 29px;
         font-size: 0.9em;
         margin-left: -20px;
     }
-    #introtext .head-jlf {
+    #introtext .head-names {
         font-size: 3em;
     }
     #introtext .date {
@@ -466,14 +434,11 @@ section h2 {
     WIDE: Menu
    ============ */
 
-    #introtext .head-edwina {
-        font-size: 9em;
-   }
     #introtext .amp {
         top: 0;
         font-size: 1em;
     }
-    #introtext .head-jlf {
+    #introtext .head-names {
         font-size: 4em;
     }
     #introtext .date {
@@ -543,14 +508,11 @@ section h2 {
         margin: 0 auto;
     }
 
-    #introtext .head-edwina {
-        font-size: 5em;
-    }
     #introtext .amp {
         top: 0;
         font-size: 1.1em;
     }
-    #introtext .head-jlf {
+    #introtext .head-names {
         font-size: 5em;
     }
     #introtext .date {
@@ -773,3 +735,32 @@ a.email {
     border-radius: 2px;
 }
 
+
+.parent-container {
+    text-align: center;
+}
+.img-grid {
+    padding: 0;
+    margin: 10px;
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    overflow: hidden;
+    display: inline-block;
+}
+
+input {
+    font-family: 'Merriweather', serif;
+    padding: 5px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    border-top: none;
+    border-bottom: 1px solid #DDD;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+}
+
+.navbar-fixed {
+    top: 0 !important;
+    position: fixed !important;
+}
