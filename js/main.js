@@ -1,6 +1,10 @@
 const GUESTS_URL = "https://spreadsheets.google.com/feeds/list/" +
                   "1LtvPaJirnFiS9GCntO4sDR9HVL_Zx7aflc6BaWSA3ZU/od6/public/basic?alt=json";
-const RSVP_FORM = "https://goo.gl/forms/pKTgKqGsztq9HsTM2";
+const RSVP_COUPLE_FORM = "https://docs.google.com/forms/d/e/" +
+                     "1FAIpQLSed9LizO5RciDTytLMNUr1sde97u_5bI2omj7N529EwCNIJsA/viewform?usp=pp_url";
+const RSVP_SINGLE_FORM = "https://docs.google.com/forms/d/e/" +
+                         "1FAIpQLSfI0L_0k7hL_356d1isEhFBaExYS5hfd-AVABOgRH40GQdc3w/viewform?usp=pp_url";
+const FORM_ENTRY_PARAM = "entry.1875773934";
 
 const CONSOLE_MESSAGE = `
 888    d8P            d8b                .d8888b.   .d8888b.   d888   .d8888b.
@@ -21,7 +25,7 @@ Ah, a fellow h4x0r... You might feel more at home here: file:///Users/kojo/hacki
 $(function() {
     console.log(CONSOLE_MESSAGE);
 
-    $('.parent-container').magnificPopup({
+    $('.img-container').magnificPopup({
         delegate: 'a',
         type: 'image',
         gallery: {
@@ -36,12 +40,24 @@ $(function() {
     });
     $("#guest-name").on('input', checkForMatchedName);
 
+    function buildRsvpUrl(guest) {
+        const encodedGuest = encodeURIComponent(guest);
+        if (guest.indexOf('&') === -1) {
+            return `${RSVP_SINGLE_FORM}&${FORM_ENTRY_PARAM}=${encodedGuest}`;
+        } else {
+            return `${RSVP_COUPLE_FORM}&${FORM_ENTRY_PARAM}=${encodedGuest}`;
+        }
+    }
+
     function checkForMatchedName() {
         const found = guests.filter((g) =>
             this.value && g.toLowerCase().indexOf(this.value.toLowerCase()) !== -1
         );
-        const html = found.map(f => `<p>${f} <a href="${RSVP_FORM}">(RSVP)</a></p>`);
+        const html = found.map(f => (
+            `<p>
+                ${f} <a href="${buildRsvpUrl(f)}" target="_blank">(RSVP)</a>
+            </p>`
+        ));
         $('#guest-result').html(html);
     }
 });
-
