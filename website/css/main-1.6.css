@@ -396,12 +396,12 @@ input {
     #gmap iframe {
         height: 400px;
     }
-
+}
 
 @media only screen and (min-width: 768px) {
 
     section h1 {
-        font-size: 4.9em;
+        font-size: 4em;
     }
     section h2 {
         font-size: 2.0em;
