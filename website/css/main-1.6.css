@@ -411,7 +411,7 @@ section h2 {
 
     .main header {
         margin-top: 10%;
-        margin-bottom: 30%;
+        margin-bottom: 0;
         float: left;
         width: 100%;
     }
@@ -478,7 +478,7 @@ section h2 {
 
     .main header {
         margin-top: 4%;
-        margin-bottom: 30%;
+        margin-bottom: 0;
         float: left;
         width: 100%;
     }
