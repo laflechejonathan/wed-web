@@ -114,6 +114,8 @@ body {
     background: rgb(0, 0, 0);
     /* RGBa with 0.9 opacity */
     background: rgba(0, 0, 0, 0.8);
+    line-height:8px;
+    display: none;
 }
 
 .title {
@@ -122,29 +124,24 @@ body {
 #introtext {
     display: block;
     padding: 10px 0 10px 0;
-    margin-bottom: 300px;
 }
 
-#introtext .amp {
-    position: relative;
-    top: 19px;
-    margin-left: -10px;
-    font-size: 0.7em;
+#introtext .head-names.amp {
+    margin-left: 2%;
+    margin-right: 2%;
 }
+
 #introtext .head-names {
     font-family: 'Merriweather', serif;
-    font-size: 2em;
+    font-size: 1.8em;
     line-height: 100%;
 }
+
 #introtext .date {
     margin-top: 10px;
     font-family: 'Merriweather', serif;
-    font-size: 1em;
+    font-size: 1.5em;
 }
-
-/* ==============
-    MOBILE: Menu
-   ============== */
 
 nav {
     z-index: 42;
@@ -187,24 +184,11 @@ nav li a.selected {
 nav ul li a:focus {outline:none;}
 nav ul li a::-moz-focus-inner {border:0;}
 
-
-
-/* ==============
-    MOBILE: Main
-   ============== */
-
-.main {
-    padding: 5% 0;
-}
-.main header {
-    float: left;
-    width: 80%;
+* { 
+    margin: 0;
+    padding: 0;
 }
 
-/* ==========================================================================
-   Brad's custom styles
-   ========================================================================== */
-* { margin: 0; padding: 0; }
 html {
 
 }
@@ -216,6 +200,14 @@ body {
 
 }
 
+.main {
+    padding: 5% 0;
+}
+
+.main header {
+    float: left;
+    width: 100%;
+}
 #bg-image {
     position: fixed; 
     top: -50%; 
@@ -244,7 +236,7 @@ section {
     padding: 25px;
     background-color: white;
     height: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
     color: #333;
 
     -ms-border-radius: 8px;
@@ -252,23 +244,14 @@ section {
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
-
-    /* Fallback for web browsers that doesn't support RGBa */
-    /* background: rgb(0, 0, 0); */
-    /* RGBa with 0.7 opacity */
-    /* background: rgba(0, 0, 0, 0.7); */
-    /* For IE 5.5 - 7*/
-    /* filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000); */
-    /* For IE 8*/
-    /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000)"; */
 }
 
 section h1 {
     font-family: 'Parisienne', cursive;
-    font-size: 2.6em;
+    font-size: 1.8em;
 }
 section h2 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 120%;
     padding: 0 0px;
 }
@@ -286,6 +269,59 @@ section h2 {
 }
 
 /* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.hr {
+    margin: 40px auto 40px auto;
+    width: 97%;
+    border-top:#1e1e1e solid 1px;
+    opacity:0.4;
+}
+
+
+.img-container {
+    text-align: center;
+}
+
+.img-grid {
+    padding: 0;
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    overflow: hidden;
+    display: inline-block;
+}
+
+input {
+    font-family: 'Merriweather', serif;
+    padding: 5px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    border-top: none;
+    border-bottom: 1px solid #DDD;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+}
+
+
+/* ==========================================================================
    Media Queries
    ========================================================================== */
 
@@ -299,31 +335,14 @@ section h2 {
         background-position: 50% 20%;
     }
 
-    .heading {
-        position: fixed;
-        top: 0px;
-        width:100%;
-        line-height:12px;
-    }
-
-    #introtext {
-        padding: 30px 0 30px 0;
-    }
-
-    #introtext .amp {
-        position: relative;
-        top: 29px;
-        font-size: 0.9em;
-        margin-left: -20px;
-    }
     #introtext .head-names {
         font-size: 3em;
     }
+
     #introtext .date {
-        font-size: 1.1em;
-        margin-top: 15px;
-        margin-bottom: 20px;
+        font-size: 2em;
     }
+
     nav {
         display: block;
     }
@@ -360,23 +379,15 @@ section h2 {
         transition: all .3s ease;
     }
 
-    .main header {
-        margin-top: 10%;
-        float: left;
-        width: 40%;
-        min-width: 320px;
-    }
-
     section {
         padding: 40px 40px 70px 40px;
     }
     section h1 {
-        font-size: 3.1em;
+        font-size: 2.5em;
     }
     section h2 {
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
-
 
     .column p {
         font-size: 1.1em;
@@ -396,10 +407,6 @@ section h2 {
         font-size: 2.0em;
     }
 
-    #introtext .amp {
-        top: 0;
-        font-size: 1em;
-    }
     #introtext .head-names {
         font-size: 4em;
     }
@@ -409,20 +416,31 @@ section h2 {
         margin-bottom: 20px;
     }
 
-    .main header {
-        margin-top: 10%;
-        margin-bottom: 0;
-        float: left;
-        width: 100%;
-    }
-
     nav a {
         padding: 15px 2%;
         font-size: 90%;
     }
+
+    .img-grid {
+        width: 100px;
+        height: 100px;
+    }
+
 }
 
 @media only screen and (min-width: 900px) {
+
+    .heading {
+        display: block;
+    }
+
+    #introtext {
+        margin-bottom: 300px;
+    }
+
+    section {
+        margin-top: 100px;
+    }
 
     section h1,
     section h2 {
@@ -445,7 +463,12 @@ section h2 {
         font-size: 1.2em;
         line-height: 145%;
         padding: 0 20px;
-    }  
+    }
+
+    .img-grid {
+        width: 150px;
+        height: 150px;
+    }
 
 }
 
@@ -462,10 +485,6 @@ section h2 {
         margin: 0 auto;
     }
 
-    #introtext .amp {
-        top: 0;
-        font-size: 1.1em;
-    }
     #introtext .head-names {
         font-size: 5em;
     }
@@ -483,65 +502,4 @@ section h2 {
         width: 100%;
     }
 
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.hr-t {
-    margin: 80px auto 0 auto;
-    width: 97%;
-    border-top:#1e1e1e solid 1px;
-    opacity:0.4;
-    filter:alpha(opacity=40); /* For IE8 and earlier */
-}
-
-.hr-b {
-    margin: 0 auto 80px auto;
-    width: 97%;
-    border-bottom:#808080 solid 1px;
-    opacity:0.4;
-    filter:alpha(opacity=40); /* For IE8 and earlier */
-}
-
-
-.img-container {
-    text-align: center;
-}
-
-.img-grid {
-    padding: 0;
-    margin: 10px;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    overflow: hidden;
-    display: inline-block;
-}
-
-input {
-    font-family: 'Merriweather', serif;
-    padding: 5px;
-    font-size: 0.9em;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    border-top: none;
-    border-bottom: 1px solid #DDD;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
 }
