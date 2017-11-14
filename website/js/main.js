@@ -4,7 +4,9 @@ const RSVP_COUPLE_FORM = "https://docs.google.com/forms/d/e/" +
                      "1FAIpQLSed9LizO5RciDTytLMNUr1sde97u_5bI2omj7N529EwCNIJsA/viewform?usp=pp_url";
 const RSVP_SINGLE_FORM = "https://docs.google.com/forms/d/e/" +
                          "1FAIpQLSfI0L_0k7hL_356d1isEhFBaExYS5hfd-AVABOgRH40GQdc3w/viewform?usp=pp_url";
-const FORM_ENTRY_PARAM = "entry.1875773934";
+
+const FORM_ENTRY_PARAM_ONE = "entry.1875773934";
+const FORM_ENTRY_PARAM_TWO = "entry.963956725";
 
 const CONSOLE_MESSAGE = `
 888    d8P            d8b                .d8888b.   .d8888b.   d888   .d8888b.
@@ -41,11 +43,12 @@ $(function() {
     $("#guest-name").on('input', checkForMatchedName);
 
     function buildRsvpUrl(guest) {
-        const encodedGuest = encodeURIComponent(guest);
         if (guest.indexOf('&') === -1) {
-            return `${RSVP_SINGLE_FORM}&${FORM_ENTRY_PARAM}=${encodedGuest}`;
+            const encodedGuest = encodeURIComponent(guest);
+            return `${RSVP_SINGLE_FORM}&${FORM_ENTRY_PARAM_ONE}=${encodedGuest}`;
         } else {
-            return `${RSVP_COUPLE_FORM}&${FORM_ENTRY_PARAM}=${encodedGuest}`;
+            const encodedGuests = guest.split('&').map(g => encodeURIComponent(g));
+            return `${RSVP_COUPLE_FORM}&${FORM_ENTRY_PARAM_ONE}=${encodedGuests[0]}&${FORM_ENTRY_PARAM_TWO}=${encodedGuests[1]}`;
         }
     }
 
