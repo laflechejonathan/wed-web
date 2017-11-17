@@ -54,7 +54,7 @@ $(function() {
 
     function checkForMatchedName() {
         const found = guests.filter((g) =>
-            this.value && g.toLowerCase().indexOf(this.value.toLowerCase()) !== -1
+            this.value.trim() && g.toLowerCase().indexOf(this.value.toLowerCase()) !== -1
         );
         const html = found.map(f => (
             `<p>
