@@ -21,7 +21,7 @@ const CONSOLE_MESSAGE = `
                      d88P
                    888P"
 
-Ah, a fellow h4x0r... You might feel more at home here: http://kojo2018.jlf-hacks.com/terminal.html
+Ah, a fellow h4x0r... You might feel more at home here: http://kojo2018.com/terminal.html
 `;
 
 $(function() {
