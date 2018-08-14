@@ -4,9 +4,12 @@ const RSVP_COUPLE_FORM = "https://docs.google.com/forms/d/e/" +
                      "1FAIpQLSed9LizO5RciDTytLMNUr1sde97u_5bI2omj7N529EwCNIJsA/viewform?usp=pp_url";
 const RSVP_SINGLE_FORM = "https://docs.google.com/forms/d/e/" +
                          "1FAIpQLSfI0L_0k7hL_356d1isEhFBaExYS5hfd-AVABOgRH40GQdc3w/viewform?usp=pp_url";
+const RSVP_FOOD_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdzcHYZDfxkXYlqk8_rwkD24K_nai23QbxXoDCWK9MIEkJ3LA/viewform?usp=pp_url"
+
 
 const FORM_ENTRY_PARAM_ONE = "entry.1875773934";
 const FORM_ENTRY_PARAM_TWO = "entry.963956725";
+const FOOD_ENTRY_PARAM_ONE = "entry.2146391151";
 
 const CONSOLE_MESSAGE = `
 888    d8P            d8b                .d8888b.   .d8888b.   d888   .d8888b.
@@ -52,13 +55,18 @@ $(function() {
         }
     }
 
+    function buildFoodUrl(guest) {
+        const encodedGuest = encodeURIComponent(guest);
+        return `${RSVP_FOOD_FORM}&${FOOD_ENTRY_PARAM_ONE}=${encodedGuest}`;
+    }
+
     function checkForMatchedName() {
         const found = guests.filter((g) =>
             this.value.trim() && g.toLowerCase().indexOf(this.value.toLowerCase()) !== -1
         );
         const html = found.map(f => (
             `<p>
-                ${f} <a href="${buildRsvpUrl(f)}" target="_blank">(RSVP)</a>
+                ${f} <a href="${buildFoodUrl(f)}" target="_blank">(Submit Details)</a>
             </p>`
         ));
         $('#guest-result').html(html);

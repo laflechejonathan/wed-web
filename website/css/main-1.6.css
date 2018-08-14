@@ -14,7 +14,7 @@ textarea {
     color: #222;
 }
 
-body {
+margody {
     font-size: 1em;
     line-height: 1.4;
 }
@@ -262,9 +262,16 @@ section h2 {
     padding: 0;
     margin: 0;
 }
-.column p, ul {
+
+.big-text {
     font-size: 1em;
-    line-height: 145%;
+    line-height: 1.4;
+    padding: 0;
+}
+
+.small-text {
+    font-size: 0.8em;
+    line-height: 1.2;
     padding: 0;
 }
 
@@ -293,7 +300,6 @@ section h2 {
     border-top:#1e1e1e solid 1px;
     opacity:0.4;
 }
-
 
 .img-container {
     text-align: center;
@@ -340,6 +346,11 @@ blockquote:after {
 blockquote p {
     display: inline;
 }
+
+td {
+    padding-right: 10px;
+}
+
 
 /* ==========================================================================
    Media Queries
@@ -409,8 +420,12 @@ blockquote p {
         font-size: 1.5em;
     }
 
-    .column p, ul {
+    .big-text {
         font-size: 1.1em;
+    }
+
+    .small-text {
+        font-size: 1em;
     }
 
     #gmap iframe {
@@ -464,7 +479,7 @@ blockquote p {
 
     section h1,
     section h2 {
-        padding: 0 20px;
+        margin-left: 20px;
     }
     section h1 {
         font-size: 4em;
@@ -475,14 +490,34 @@ blockquote p {
         float: none;
         width: 100%;
     }
+
+    .column.dense {
+        clear: both;
+        float: none;
+        width: 85%;
+    }
+
     .column {
         float: left;
         width: 50%;
     }
+
     .column p, ul {
+        margin-left: 20px;
+    }
+
+    .big-text {
         font-size: 1.2em;
-        line-height: 145%;
-        padding: 0 20px;
+        line-height: 1.4;
+    }
+
+    .small-text {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    .column table {
+        margin-left: 20px;
     }
 
     .img-grid {
