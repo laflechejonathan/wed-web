@@ -1,5 +1,4 @@
-const GUESTS_URL = "https://spreadsheets.google.com/feeds/list/" +
-                  "1LtvPaJirnFiS9GCntO4sDR9HVL_Zx7aflc6BaWSA3ZU/od6/public/basic?alt=json";
+const GUESTS_URL = "https://sheetdb.io/api/v1/5vm93qdatmmng";
 const RSVP_COUPLE_FORM = "https://docs.google.com/forms/d/e/" +
                      "1FAIpQLSed9LizO5RciDTytLMNUr1sde97u_5bI2omj7N529EwCNIJsA/viewform?usp=pp_url";
 const RSVP_SINGLE_FORM = "https://docs.google.com/forms/d/e/" +
@@ -40,8 +39,8 @@ $(function() {
 
     // hack of the century lol
     let guests = [];
-    $.getJSON(GUESTS_URL, (data) => {
-        guests = data.feed.entry.map(entry => entry.title["$t"]);
+    $.getJSON(GUESTS_URL, (rows) => {
+        guests = rows.map(row => row["Guest Name"]);
     });
     $("#guest-name").on('input', checkForMatchedName);
 
